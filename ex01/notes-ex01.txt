@@ -1,0 +1,110 @@
+Step #1
+*******
+	Working directory: ex01\
+
+	javac -d classes -sourcepath src src/com/example/Delegation.java
+
+	After this operation, classes folder will be populated with the
+	java .class files.
+	
+	output;
+	*******
+	D:\MainEclipse\tezgah\class-loader-examples\ex01>javac -d classes -sourcepath src src/com/example/Delegation.java
+
+
+Step #2
+*******
+	Working directory: ex01\
+
+	java -cp classes com.example.Delegation
+
+	output;
+	*******
+	D:\MainEclipse\tezgah\class-loader-examples\ex01>java -cp classes com.example.Delegation
+	sun.misc.Launcher$AppClassLoader@4e0e2f2a
+	sun.misc.Launcher$ExtClassLoader@2a139a55
+	Bootstrap classloader
+
+Step #3
+*******
+	Working directory: ex01\
+
+	javac -d classes -sourcepath src src/com/example/DelegationPaths.java
+
+	After this operation, classes folder will be populated with the
+	java .class files.
+	
+	output;
+	*******
+	D:\MainEclipse\tezgah\class-loader-examples\ex01>javac -d classes -sourcepath src src/com/example/DelegationPaths.java
+
+
+Step #4
+*******
+	Working directory: ex01\
+
+	java -cp classes com.example.DelegationPaths
+
+	output;
+	*******
+	D:\MainEclipse\tezgah\class-loader-examples\ex01>java -cp classes com.example.DelegationPaths
+	sun.misc.Launcher$AppClassLoader@4e0e2f2a
+			 /D:/MainEclipse/tezgah/class-loader-examples/ex01/classes/
+	sun.misc.Launcher$ExtClassLoader@33909752
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/access-bridge-64.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/cldrdata.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/dnsns.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/jaccess.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/jfxrt.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/localedata.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/nashorn.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunec.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunjce_provider.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunmscapi.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunpkcs11.jar
+			 /C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/zipfs.jar
+	Bootstrap classloader
+
+
+Additional steps;
+*****************
+
+Step #5
+*******
+	Working directory: ex01\
+
+	javac -d classes -sourcepath src src/com/example/ExtDelegationPathExample.java
+
+	After this operation, classes folder will be populated with the
+	java .class files.
+	
+	output;
+	*******
+	D:\MainEclipse\tezgah\class-loader-examples\ex01>javac -d classes -sourcepath src src/com/example/ExtDelegationPathExample.java
+
+
+Step #6
+*******
+	Working directory: ex01\
+
+	java -cp classes com.example.ExtDelegationPathExample
+
+	output;
+	*******
+	D:\MainEclipse\tezgah\class-loader-examples\ex01>java -cp classes com.example.ExtDelegationPathExample
+	ExtClassLoader
+	**************
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/access-bridge-64.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/cldrdata.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/dnsns.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/jaccess.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/jfxrt.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/localedata.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/nashorn.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunec.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunjce_provider.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunmscapi.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/sunpkcs11.jar
+			 file:/C:/Program%20Files/Java/jdk1.8.0_73/jre/lib/ext/zipfs.jar
+
+
